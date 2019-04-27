@@ -3,7 +3,7 @@
 <section id='presenter'>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center" style='margin-top: 80px; margin-bottom: 30px;'>
 				<h2 class="bold">COZINHAR.COM.VC</h2>
 				
 				<div class='col-md-8 col-md-offset-2'>
@@ -18,6 +18,18 @@
 				<% end %>
 				</div>
 
+				<div class="col-md-8 col-md-offset-2" style='padding-top: 20px;'>
+					<ul class="list-unstyled list-inline">
+						<li><%= link_to 'pastel', '' %></li>
+						<li><%= link_to 'beringela', '' %></li>
+						<li><%= link_to 'bolo de milho', '' %></li>
+						<li><%= link_to 'maionese', '' %></li>
+						<li><%= link_to 'brigadeiro', '' %></li>
+						<li><%= link_to 'milho', '' %></li> |
+						<li><%= link_to 'Categorias', '' %></li>
+					</ul>
+				</div>
+
 				<div class="col-md-12"><br>
 					<%= link_to 'Criar Receita', '', class: 'btn btn-success btn-lg' %>
 				</div>
@@ -26,7 +38,7 @@
 	</div>
 </section>
 
-<section id="recipes" style='background-color: #EEE; margin-top: 30px;'>
+<section id="recipes" style='background-color: #EEE; margin-top: 30px; padding-top: 20px;'>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -38,7 +50,18 @@
 				 	 </h5>
 					 <div class="panel panel-default">
 					 		<div class="jumbotron" style='margin-bottom: 0px;'>
-					 			
+					 			<ul class="list-unstyled list-inline">
+					 				<li>
+					 					 <%= link_to '', class: 'pull-left' do %>
+					 					 	 <i class='glyphicon glyphicon-search'></i>
+					 					 <% end %>
+					 				</li>
+					 				<li>
+					 					 <%= link_to '', class: 'pull-right' do %>
+												<i class="glyphicon glyphicon-search"></i>
+					 					 <% end %>
+					 				</li>
+					 			</ul>
 					 		</div>
 					 		<ul class="list-unstyled" style='padding-top: -10px; padding: 20px;'>
 					 			<li><h3>Egg salad</h3></li>
