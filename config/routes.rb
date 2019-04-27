@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  
+
   # Authenticaton
   # @implemented
   devise_for :users
@@ -8,6 +8,17 @@ Rails.application.routes.draw do
   # Application
   # @implemented
   root to: 'home#index'
+  resources :recipes, only: [:index, :show]
+
+  # Dashboard
+  # @implemented
+  namespace :dashboard do
+  	resources :recipes
+  	resources :notifications
+  	resources :analytics
+  	resources :account
+  	resources :profile
+  end
 
   # API
   # @implemented
