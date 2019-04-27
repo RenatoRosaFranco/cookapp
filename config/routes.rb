@@ -1,5 +1,22 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
+  
+  # Authenticaton
+  # @implemented
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # Application
+  # @implemented
   root to: 'home#index'
+
+  # API
+  # @implemented
+  namespace :api, constraint: { subdomain: 'api' } do
+  	namespace :v1 do
+  		# some code here
+  	end
+  	namespace :v2 do
+  		# some code here
+  	end
+  end
 end
