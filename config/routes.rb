@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+	
+	# Adminsitration
+	# @implemented
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   # Authenticaton
   # @implemented
@@ -13,11 +17,12 @@ Rails.application.routes.draw do
   # Dashboard
   # @implemented
   namespace :dashboard do
+  	get '/', to: 'home#index'
   	resources :recipes
   	resources :notifications
   	resources :analytics, only: [:index]
   	resources :account
-  	resources :profile, only: [:index, :show, :edit, :update, :destroy]
+  	resources :profiles, only: [:index, :show, :edit, :update, :destroy]
   end
 
   # API
