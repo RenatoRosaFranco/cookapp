@@ -1,0 +1,53 @@
+<%= provide :title, 'Home' %>
+
+<section id='presenter'>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2 class="bold">COZINHAR.COM.VC</h2>
+				
+				<div class='col-md-8 col-md-offset-2'>
+				<%= form_for(:recipe) do |f| %>
+					<div class="field col-md-8">
+						<%= f.search_field :query, class: 'form-control', required: 'required',
+						placeholder: 'Nome, Ingrediente, prato', autocomplete: 'off' %>
+					</div>
+					<div class="col-md-4">
+						<%= f.submit 'Buscar Receita', class: 'btn btn-primary btn-lg top' %>
+					</div>
+				<% end %>
+				</div>
+
+				<div class="col-md-12"><br>
+					<%= link_to 'Criar Receita', '', class: 'btn btn-success btn-lg' %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="recipes" style='background-color: #EEE; margin-top: 30px;'>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<% for i in 1..12 %>
+				 <div class='col-md-3'>
+				 	 <h5>
+				 	 	 <%= image_tag('', class: 'avartar', style: 'width: 44px; height: 44px; border-radius: 44px; background-color: #FFF;') %>
+				 	 	 <%= link_to 'John Doe', '' %> publicou
+				 	 </h5>
+					 <div class="panel panel-default">
+					 		<div class="jumbotron" style='margin-bottom: 0px;'>
+					 			
+					 		</div>
+					 		<ul class="list-unstyled" style='padding-top: -10px; padding: 20px;'>
+					 			<li><h3>Egg salad</h3></li>
+					 			<li><p>by <%= link_to 'John Doe', '' %></p></li>
+					 		</ul>
+					 </div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</section>
