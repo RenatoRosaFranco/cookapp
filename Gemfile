@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.0'
+ruby '2.6.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
@@ -30,10 +30,23 @@ gem 'devise-jwt'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'responders'
+gem 'factory_bot_rails'
+gem 'ffaker'
+gem 'simplecov'
+gem 'rubocop'
+gem 'draper'
+gem 'rack-cors'
+gem 'rails_admin'
+gem 'shoulda'
+gem 'rails_best_practices'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'bootstrap3-rails'
 gem 'jquery-rails'
+gem 'rails-erd'
+gem 'rspec-rails'
+gem 'dotenv-rails'
+gem 'database_cleaner'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
