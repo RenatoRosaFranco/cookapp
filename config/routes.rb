@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   namespace :dashboard do
   	resources :recipes
   	resources :notifications
-  	resources :analytics
+  	resources :analytics, only: [:index]
   	resources :account
-  	resources :profile
+  	resources :profile, only: [:index, :show, :edit, :update, :destroy]
   end
 
   # API
