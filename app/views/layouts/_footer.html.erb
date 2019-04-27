@@ -1,0 +1,22 @@
+<footer style='padding-top: 40px; padding-bottom: 80px;'>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<p>Copyright &copy <%= Date.today.year %>. 
+					Todos os direitos reservados.</p>
+				</div>
+				<div class="col-md-6">
+					<ul class="list-unstyled list-inline">
+						<li><%= link_to 'Portuguese', root_path(locale: 'pt-BR') %></li>
+						<li><%= link_to 'English',    root_path(locale: 'en') %></li>
+						<li><%= link_to 'Deustch',    root_path(locale: 'de') %></li>
+						<li><%= link_to 'Spanish',    root_path(locale: 'es') %></li>
+						<li><%= link_to 'Russian',    root_path(locale: 'ru') %></li>
+						<li><%= link_to 'Ver Todos', '' %></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
