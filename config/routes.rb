@@ -14,6 +14,12 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :recipes, only: [:index, :show]
 
+  # Blog
+  # @implemented
+  namespace :blog, constraint: { subdomain: 'api' } do
+  	resources :posts, only: [:index, :show]
+  end
+
   # Dashboard
   # @implemented
   namespace :dashboard do

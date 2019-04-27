@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_27_180549) do
+ActiveRecord::Schema.define(version: 2019_04_27_182855) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer "recipe_id"
@@ -49,6 +49,21 @@ ActiveRecord::Schema.define(version: 2019_04_27_180549) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.text "content"
+    t.boolean "published"
+    t.string "slug"
+    t.string "tags"
+    t.integer "category_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "recipes", force: :cascade do |t|
