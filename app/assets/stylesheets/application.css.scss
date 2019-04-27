@@ -29,6 +29,26 @@
  	}
  	background-color: #FFF;
  }
+ 
+ #toTop {
+ 	position: fixed;
+  width: 54px;
+  height: 54px;
+  right: 30px;
+  background-color: #999;
+  z-index: 9990 !important;
+  border-radius: 54px;
+  color: #FFF;
+  display: inline-block;
+  bottom: 20px;
+
+  i {
+   position: relative;
+   font-size: 27px;
+   padding: 13px;
+   padding-left: 15px;
+  }
+ }
 
  .bold {
  	position: relative;
