@@ -6,7 +6,7 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string     :gender
       t.references :state, foreign_key: true
       t.references :city, foreign_key: true
-      t.text :bio
+      t.text       :bio
       t.references :user
 
       t.timestamps

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # Application
   # @implemented
   root to: 'home#index'
-  resources :recipes, only: [:index, :show]
+  resources :recipes
 
   # Blog
   # @implemented

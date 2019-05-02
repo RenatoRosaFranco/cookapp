@@ -31,7 +31,9 @@
 				</div>
 
 				<div class="col-md-12"><br>
-					<%= link_to 'Criar Receita', '', class: 'btn btn-success btn-lg' %>
+					<%= link_to new_recipe_path, class: 'btn btn-success btn-lg' do %>
+						<i class="fas fa-edit"></i> Adicionar Receita
+					<% end %>
 				</div>
 			</div>
 		</div>

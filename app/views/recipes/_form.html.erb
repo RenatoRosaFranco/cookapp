@@ -1,0 +1,35 @@
+<%= form_for(recipe) do |f| %>
+	<div class="field">
+		<%= f.label :thumbnail, "Thumbnail" %>
+		<%= f.file_field :thubmnail %>
+	</div>
+	<div class="field">
+		<%= f.label :title, 'Titulo' %>
+		<%= f.text_field :title, class: 'form-control', required: 'required',
+		placeholder: 'Digite o titulo', autocomplete: 'off' %>
+	</div>
+	<div class="field">
+		<%= f.label :ingredients, 'Ingredientes' %>
+		<%= f.text_area :ingredients, class: 'form-control', required: 'required',
+		placeholder: 'Digite os ingredientes', autocomplete: 'off' %>
+	</div>
+	<div class="field">
+		<%= f.label :instructions, "Instruções" %>
+		<%= f.text_area :instructions, class: 'form-control', required: 'required', placeholder: 'Digitar as instruções', autocomplete: 'off' %>
+	</div>
+	<div class="field"><br>
+		<%= f.label :allow_comments, 'Permitir comentários?' %><br>
+		<%= f.check_box :allow_comments %>
+	</div>
+	<div class="field"><br>
+		<%= f.label :status, 'Publicada?' %><br>
+		<%= f.check_box :status %>
+	</div>
+	<div class="field">
+		<%= f.label :category_id, 'Categoria' %>
+		<%= f.collection_select(:category_id, Category.all, :id, :name, { prompt: 'Selecionar Categoria'}, { class: 'form-control', autocomplete: 'off'}) %>
+	</div>
+	<div class="actions"><br>
+		<%= f.submit 'Cadastrar', class: 'btn btn-primary btn-lg top' %>
+	</div>
+<% end %>
