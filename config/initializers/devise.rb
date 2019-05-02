@@ -23,6 +23,21 @@ Devise.setup do |config|
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
+  # Facebook Application
+  # @implemented
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'],
+  callback_url: "http://localhost:3000/users/auth/facebook/callback"
+
+  # Google Application
+  # @implemented
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'],
+  callback_url: "http://localhost:3000/users/auth/google_oauth2/callback"
+
+  # Instagram Application
+  # @implemented
+  config.omniauth :instagram, ENV['INSTAGRAM_APP_ID'], ENV['INSTAGRAM_APP_SECRET'],
+  callback_url: "http://localhost:3000/users/auth/instagram/callback"
+
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
 
