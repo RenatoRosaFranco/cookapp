@@ -5,14 +5,16 @@ Rails.application.routes.draw do
 	# @implemented
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  # Authenticaton
   # @implemented
-  devise_for :users
+  devise_for :users, :controllers => {
+   omniauth_callbacks: 'users/omniauth_callbacks'
+  }
 
+   
   # Application
   # @implemented
   root to: 'home#index'
-  resources :recipes
+  resources :recipes  
 
   # Blog
   # @implemented
